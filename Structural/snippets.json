@@ -6,14 +6,16 @@
       "  <img src=\"${1:Banner_Image_URL}\" width=\"400\" alt=\"${2:}\" />",
       "</div>",
       "",
+      "<dl class=\"guide-metrics\">",
+      "  <dt class=\"overview-heading\">${5:Difficulty Rating}</dt>",
+      "  <dd>${6:5/10}</dd>",
+      "",
+      "  <dt class=\"overview-heading\">${7:Online/Offline Trophies}</dt>",
+      "  <dd>${8:Online/Offline status.}</dd>",
+      "</dl>",
+      "",
       "<h3 class=\"overview-heading\">${3:Quick Overview}</h3>",
       "<p>${4:Game Description}</p>",
-      "",
-      "<h3 class=\"overview-heading\">${5:Difficulty Rating}</h3>",
-      "<p>${6:5/10}</p>",
-      "",
-      "<h3 class=\"overview-heading\">${7:Online/Offline Trophies}</h3>",
-      "<p>${8:Online/Offline status.}</p>",
       "",
       "<details>",
       "  <summary>My Method of Verification for Unlock Methods</summary>",
@@ -38,8 +40,8 @@
 
   "Searchable Overview": {
     "prefix": "dlc-overview",
-    "body": ["<div class=\"overview-node\" data-group=\"${1:DLC Name}\" data-paid=\"${6:true/false}\">", "  <div class=\"banner\">", "    <img src=\"${2:Banner_Image_URL}\" width=\"400\" alt=\"\" />", "  </div>", "", "  <h2 class=\"dlc-heading\">${1:DLC Name}</h2>", "", "  <h3 class=\"overview-heading\">Quick Overview</h3>", "  <p>${3:DLC Description}</p>", "", "  <h3 class=\"overview-heading\">Difficulty Rating</h3>", "  <p>${4:5/10}</p>", "", "  <h3 class=\"overview-heading\">Online/Offline Trophies</h3>", "  <p>${5:Online/Offline status.}</p>", "</div>"],
-    "description": "Insert the searchable DLC overview with semantic H3 headings"
+    "body": ["<div class=\"overview-node\" data-group=\"${1:DLC Name}\" data-paid=\"${6:true/false}\">", "  <div class=\"banner\">", "    <img src=\"${2:Banner_Image_URL}\" width=\"400\" alt=\"\" />", "  </div>", "", "  <h2 class=\"dlc-heading\">${1:DLC Name}</h2>", "", "  <dl class=\"guide-metrics\">", "    <dt class=\"overview-heading\">Difficulty Rating</dt>", "    <dd>${4:5/10}</dd>", "", "    <dt class=\"overview-heading\">Online/Offline Trophies</dt>", "    <dd>${5:Online/Offline status.}</dd>", "  </dl>", "", "  <h3 class=\"overview-heading\">Quick Overview</h3>", "  <p>${3:DLC Description}</p>", "</div>"],
+    "description": "Insert the searchable DLC overview with semantic data lists and headings"
   },
 
   "Trophy Item": {
