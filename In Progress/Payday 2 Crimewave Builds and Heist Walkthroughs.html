@@ -1,0 +1,168 @@
+<div class="payday-mastery" id="payday-mastery" style="color: var(--om-text, #e2e6eb); line-height: 1.65">
+  <h1 class="om-title" style="margin: 0 0 1rem; color: var(--om-text, #e2e6eb)">Payday 2: Crimewave Edition Reference Manual</h1>
+  <p class="om-muted" style="color: var(--om-muted, #b7c0cb); margin-bottom: 1.5rem">A comprehensive, text-based tactical manual and completionist walkthrough suite. Designed for mobile offline APK deployment and high-efficiency achievement hunting.</p>
+
+  <!-- Navigation / Section Tabs -->
+  <div class="om-tabs" role="tablist" aria-label="Payday 2 Guide sections" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.5rem; margin: 1.25rem 0">
+    <button class="om-tab" role="tab" aria-controls="pd-panel-builds" aria-selected="true" tabindex="0">1. Builds &amp; Loadouts</button>
+    <button class="om-tab" role="tab" aria-controls="pd-panel-stealth" aria-selected="false" tabindex="-1">2. Stealth Heists</button>
+    <button class="om-tab" role="tab" aria-controls="pd-panel-loud" aria-selected="false" tabindex="-1">3. Loud Heists</button>
+    <button class="om-tab" role="tab" aria-controls="pd-panel-optional" aria-selected="false" tabindex="-1">4. Optional Stealth</button>
+    <button class="om-tab" role="tab" aria-controls="pd-panel-delisted" aria-selected="false" tabindex="-1">5. Delisted Vault</button>
+  </div>
+
+  <!-- SECTION 1: BUILDS & LOADOUTS -->
+  <section class="om-panel" id="pd-panel-builds" role="tabpanel" aria-labelledby="pd-tab-builds" tabindex="0">
+    <h2>1. Builds &amp; Loadout Frameworks</h2>
+    <p>Optimized skill point distributions, perk decks, and weapon setups tailored for high-difficulty progression, solo execution, and seamless stealth/loud transitions.</p>
+
+    <div class="om-section">
+      <h3>Stealth Utility Build (Ghost / Shinobi Focus)</h3>
+      <p><strong>Core Perk Deck:</strong> Burglar (or Hacker for portable ECM utility)</p>
+      <ul class="om-list-tight">
+        <li><strong>Primary Weapon:</strong> Compact/Silent weapon with low concealment (e.g., Cavity 9mm or Judge Shotgun with Silencer).</li>
+        <li><strong>Deployable:</strong> ECM Jammer (Aced for feedback loops and pager blocking) or Body Bag Case.</li>
+        <li><strong>Key Skills:</strong> <em>Nimble Aced</em> for safe/lockpicking speed, <em>Cleaner Aced</em> for body bag capacity, <em>ECM Overdrive</em>.</li>
+      </ul>
+    </div>
+
+    <div class="om-section">
+      <h3>Loud Sustain Build (Armorer / Stoic Focus)</h3>
+      <p><strong>Core Perk Deck:</strong> Stoic or Armorer</p>
+      <ul class="om-list-tight">
+        <li><strong>Primary / Secondary:</strong> High-DPS LMG or Assault Rifle paired with a high-damage pocket shotgun (Judge) or SMG.</li>
+        <li><strong>Deployable:</strong> Doctor Bags or First Aid Kits (depending on perk deck synergy).</li>
+        <li><strong>Key Skills:</strong> <em>Inspire Aced</em> for clutch crew revives, <em>Nine Lives Aced</em>, heavy armor tier mastery.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 2: STEALTH ONLY HEISTS -->
+  <section class="om-panel" id="pd-panel-stealth" role="tabpanel" aria-labelledby="pd-tab-stealth" tabindex="0" hidden>
+    <h2>2. Stealth-Only Heists</h2>
+    <p>Pure ghost walkthroughs requiring zero mask-on combat. Focuses on guard management, pager control, objective scripting, and escape setup.</p>
+
+    <!-- Example Heist Template: Golden Grin Casino / First World Bank style -->
+    <details class="op-card" style="margin-bottom: 0.85rem; border: 1px solid var(--om-border, #39414d); border-radius: 0.45rem; background: var(--om-panel, #171c24)">
+      <summary class="op-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 1rem; background: var(--om-panel-raised, #202733); cursor: pointer">
+        <span class="op-name" style="font-weight: 800; font-size: 1.12rem">Heist Template: [Heist Name] (Stealth)</span>
+        <span class="op-stats" style="color: var(--om-muted, #b7c0cb); font-size: 0.92rem">Difficulty: Death Wish / DSOD</span>
+      </summary>
+      <div class="op-details" style="padding: 1rem">
+        <h4>Pre-Planning Phase</h4>
+        <ul class="om-list-tight">
+          <li>[Specify asset purchases, e.g., backdoor keys, body bag cases, or escape vehicle options.]</li>
+        </ul>
+
+        <h4>Step-by-Step Walkthrough</h4>
+        <ol class="om-list-tight" style="padding-left: 1.2rem">
+          <li><strong>Casing &amp; Recon:</strong> Scout keycard locations, camera loops, and civilian patrol patterns without raising suspicion.</li>
+          <li><strong>Eliminating Key Personnel:</strong> Handle inner/outer guard paths while strictly budgeting your 4 team pagers.</li>
+          <li><strong>Objective Execution:</strong> Step-by-step terminal hacking, puzzle navigation, or safe drilling protocols.</li>
+          <li><strong>Loot Secure &amp; Escape:</strong> Transport bags safely to the pre-planned extraction point.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- SECTION 3: LOUD ONLY HEISTS -->
+  <section class="om-panel" id="pd-panel-loud" role="tabpanel" aria-labelledby="pd-tab-loud" tabindex="0" hidden>
+    <h2>3. Loud-Only Heists</h2>
+    <p>Full combat engagement documentation, choke-point holding strategies, drill management, and assault wave survival tactics.</p>
+
+    <details class="op-card" style="margin-bottom: 0.85rem; border: 1px solid var(--om-border, #39414d); border-radius: 0.45rem; background: var(--om-panel, #171c24)">
+      <summary class="op-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 1rem; background: var(--om-panel-raised, #202733); cursor: pointer">
+        <span class="op-name" style="font-weight: 800; font-size: 1.12rem">Heist Template: [Heist Name] (Loud)</span>
+        <span class="op-stats" style="color: var(--om-muted, #b7c0cb); font-size: 0.92rem">Difficulty: Death Wish / DSOD</span>
+      </summary>
+      <div class="op-details" style="padding: 1rem">
+        <h4>Defensive Holdout Positions &amp; Equipment</h4>
+        <ul class="om-list-tight">
+          <li><strong>Anchor Rooms:</strong> Identify choke points with minimal entry angles to weather high-intensity assault waves.</li>
+          <li><strong>Ammo &amp; Doctor Bag Placement:</strong> Safe interior spots to drop utility boxes away from sniper lines or C4 blast radii.</li>
+        </ul>
+
+        <h4>Assault Wave Management</h4>
+        <ol class="om-list-tight" style="padding-left: 1.2rem">
+          <li><strong>Initial Alarm &amp; Drill Setup:</strong> Managing early cop waves while securing objective machinery.</li>
+          <li><strong>Special Unit Counter-Play:</strong> Prioritizing Tasers, Cloakers, Shields, and Medic Dozers.</li>
+          <li>The final bag run and managing custody timers during the escape sprint.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- SECTION 4: OPTIONAL STEALTH (STEALTH -> LOUD) -->
+  <section class="om-panel" id="pd-panel-optional" role="tabpanel" aria-labelledby="pd-tab-optional" tabindex="0" hidden>
+    <h2>4. Optional Stealth (Stealth-First, Loud-Fallback)</h2>
+    <p>Heists designed to start completely quiet to bypass heavy initial defenses, with structured transition protocols for when stealth inevitably goes loud.</p>
+
+    <details class="op-card" style="margin-bottom: 0.85rem; border: 1px solid var(--om-border, #39414d); border-radius: 0.45rem; background: var(--om-panel, #171c24)">
+      <summary class="op-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 1rem; background: var(--om-panel-raised, #202733); cursor: pointer">
+        <span class="op-name" style="font-weight: 800; font-size: 1.12rem">Heist Template: [Heist Name] (Optional Stealth)</span>
+        <span class="op-stats" style="color: var(--om-muted, #b7c0cb); font-size: 0.92rem">Flexible Approach</span>
+      </summary>
+      <div class="op-details" style="padding: 1rem">
+        <h4>Phase 1: The Stealth Open</h4>
+        <p>How to slip in quietly, disable internal security layers, and set up assets before raising the alarm or securing key items early.</p>
+
+        <h4>Phase 2: Transition Protocol (Going Loud)</h4>
+        <p>What to do immediately when a pager fails or an accidental alert triggers: quick fallback positions, dropping loud assets/ammo, and pivoting skill profiles on the fly.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- SECTION 5: THE DELISTED VAULT -->
+  <section class="om-panel" id="pd-panel-delisted" role="tabpanel" aria-labelledby="pd-tab-delisted" tabindex="0" hidden>
+    <h2>5. The Delisted Content Vault</h2>
+    <p>Dedicated archival documentation for legacy content, removed crossover material, old-school mechanics, and retired platform updates for players who still own and maintain the game.</p>
+
+    <div class="om-section">
+      <h3>Archival Overview &amp; Legacy Patch Notes</h3>
+      <p class="om-placeholder">Preserving historical heist layouts, removed weapon balance stats, and legacy achievements that are no longer supported on standard corporate network updates.</p>
+      <ul class="om-list-tight">
+        <li><strong>Legacy Heist Mechanics:</strong> Detailed routing for older versions before platform parity updates.</li>
+        <li><strong>Removed / Modified Assets:</strong> Cataloging items and loadout pieces affected by licensing shifts.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<script>
+  (function () {
+    var guide = document.getElementById("payday-mastery");
+    if (!guide) return;
+
+    var tabs = Array.prototype.slice.call(guide.querySelectorAll('[role="tab"]'));
+
+    function activateTab(tab, moveFocus) {
+      tabs.forEach(function (item) {
+        var selected = item === tab;
+        item.setAttribute("aria-selected", selected ? "true" : "false");
+        item.setAttribute("tabindex", selected ? "0" : "-1");
+        var panel = guide.querySelector("#" + item.getAttribute("aria-controls"));
+        if (panel) panel.hidden = !selected;
+      });
+
+      if (moveFocus) tab.focus();
+    }
+
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener("click", function () {
+        activateTab(tab, false);
+      });
+
+      tab.addEventListener("keydown", function (event) {
+        var nextIndex = index;
+        if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+        else if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === "Home") nextIndex = 0;
+        else if (event.key === "End") nextIndex = tabs.length - 1;
+        else return;
+
+        event.preventDefault();
+        activateTab(tabs[nextIndex], true);
+      });
+    });
+  })();
+</script>
