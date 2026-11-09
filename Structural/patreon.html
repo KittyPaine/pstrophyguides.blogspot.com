@@ -1,0 +1,186 @@
+<style>
+  /* Lead Architect Wall of Fame Container Styles */
+  .kp-wall-of-fame {
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 0 auto 30px auto !important;
+    padding: 24px !important;
+    color: #edf5fa !important;
+    background: linear-gradient(135deg, #0a1218, #10212b, #1a1208) !important;
+    border: 1px solid #c5a059 !important;
+    border-radius: 14px !important;
+    box-shadow:
+      0 0 30px rgba(197, 160, 89, 0.15),
+      inset 0 0 15px rgba(197, 160, 89, 0.05) !important;
+    font-family: inherit !important;
+    box-sizing: border-box !important;
+  }
+
+  .kp-wall-of-fame *,
+  .kp-wall-of-fame *::before,
+  .kp-wall-of-fame *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* Header Section */
+  .kp-wall-header {
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2) !important;
+    padding-bottom: 14px !important;
+  }
+
+  .kp-wall-eyebrow {
+    margin: 0 0 4px 0 !important;
+    color: #c5a059 !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  .kp-wall-title {
+    margin: 0 !important;
+    color: #f1bb59 !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.03em !important;
+    text-shadow: 0 2px 8px rgba(241, 187, 89, 0.2) !important;
+  }
+
+  .kp-wall-subtitle {
+    margin: 6px 0 0 0 !important;
+    color: #d5e2eb !important;
+    font-size: 12px !important;
+    font-style: italic !important;
+    opacity: 0.85 !important;
+  }
+
+  /* Contributors Grid Layout */
+  .kp-architects-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  /* Individual Architect Card */
+  .kp-architect-card {
+    background: rgba(10, 18, 24, 0.7) !important;
+    border: 1px solid rgba(7, 134, 232, 0.3) !important;
+    border-radius: 10px !important;
+    padding: 14px 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.25s ease-in-out !important;
+  }
+
+  .kp-architect-card::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 3px !important;
+    height: 100% !important;
+    background: #c5a059 !important;
+  }
+
+  .kp-architect-card:hover {
+    border-color: #f1bb59 !important;
+    box-shadow: 0 0 16px rgba(241, 187, 89, 0.2) !important;
+    transform: translateY(-2px !important);
+  }
+
+  /* Rank Badge / Icon */
+  .kp-architect-badge {
+    width: 36px !important;
+    height: 36px !important;
+    background: linear-gradient(135deg, #1c2e3d, #0a1218) !important;
+    border: 1px solid #c5a059 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #f1bb59 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    flex-shrink: 0 !important;
+    box-shadow: 0 0 8px rgba(197, 160, 89, 0.2) !important;
+  }
+
+  /* Details Wrapper */
+  .kp-architect-info {
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .kp-architect-name {
+    margin: 0 0 2px 0 !important;
+    color: #edf5fa !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .kp-architect-status {
+    margin: 0 !important;
+    color: #66bdff !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  /* Empty State for Launch / Zero Backers Yet */
+  .kp-wall-empty {
+    text-align: center !important;
+    padding: 24px 12px !important;
+    color: #d5e2eb !important;
+    font-size: 13px !important;
+    font-style: italic !important;
+    background: rgba(10, 18, 24, 0.4) !important;
+    border: 1px dashed rgba(197, 160, 89, 0.3) !important;
+    border-radius: 10px !important;
+  }
+
+  .kp-wall-empty a {
+    color: #66bdff !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+  }
+
+  .kp-wall-empty a:hover {
+    color: #f1bb59 !important;
+    text-decoration: underline !important;
+  }
+</style>
+
+<div class="kp-wall-of-fame">
+  <!-- Header Block -->
+  <div class="kp-wall-header">
+    <div class="kp-wall-eyebrow">Solo Studio Patronage</div>
+    <h2 class="kp-wall-title">Lead Architect Wall of Fame</h2>
+    <div class="kp-wall-subtitle">Honoring the top-tier builders keeping Kitty Paine’s trophy guides 100% ad-free & paywall-free.</div>
+  </div>
+
+  <!-- Contributors Grid (Populate cards here as Lead Architects join) -->
+  <div class="kp-architects-grid">
+    <!-- Example Card 1 (Active Backer Placeholder / Template) -->
+    <!--
+    <div class="kp-architect-card">
+      <div class="kp-architect-badge">★</div>
+      <div class="kp-architect-info">
+        <h3 class="kp-architect-name">SupporterName</h3>
+        <p class="kp-architect-status">Lead Architect Tier</p>
+      </div>
+    </div>
+    -->
+
+    <!-- Empty State (Shown when no backers are active yet) -->
+    <div class="kp-wall-empty" style="grid-column: 1 / -1 !important">Your name could be right here! Back the studio at the Lead Architect tier on <a href="https://patreon.com/KittyPaine?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" target="_blank" rel="noopener">Patreon</a> to secure permanent code-level attribution on the repository.</div>
+  </div>
+</div>
