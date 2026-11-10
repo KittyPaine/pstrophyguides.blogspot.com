@@ -53,22 +53,24 @@ header,
 
 .Header h1,
 .Header h1 a {
-  color: #7ab9f0 !important;
+  color: #000000 !important;
   text-align: center !important;
-  font-size: clamp(32px, 5vw, 60px) !important;
-  text-shadow: 0px 0px 15px #000 !important;
+  font-size: clamp(28px, 4vw, 48px) !important; /* Scaled down slightly for better proportion */
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6) !important; /* Light glow so it pops against darker parts of the banner */
   width: 100% !important;
 }
 
-.Header .description,
-.header-inner .description {
-  color: #000000 !important;
-  font-weight: bold !important;
-  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8) !important;
-  background: rgba(255, 255, 255, 0.4) !important;
-  padding: 5px 15px !important;
-  border-radius: 4px !important;
-  margin-top: 10px !important;
+.Header h1,
+.Header h1 a {
+  color: #1e90ff !important; /* Rich Royal Blue / Dodger Blue */
+  text-align: center !important;
+  font-size: clamp(24px, 3.8vw, 44px) !important; /* Scaled down slightly */
+  text-shadow:
+    0 0 8px #000000,
+    0 0 16px #000000,
+    0 0 24px rgba(30, 144, 255, 0.7) !important; /* Matching royal blue outer aura */
+  font-weight: 800 !important;
+  width: 100% !important;
 }
 
 /* --- Post Boxes & Sidebars --- */
