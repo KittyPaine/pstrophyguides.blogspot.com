@@ -4,7 +4,7 @@
     font-size: 0.75rem !important;
     font-weight: 700 !important;
     color: #c5a059 !important;
-    margin: 1rem 0 0.5rem 0 !important;
+    margin: 1.2rem 0 0.5rem 0 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.05em !important;
   }
@@ -23,7 +23,7 @@
     transition: all 0.2s ease-in-out !important;
   }
 
-  /* Hover State (Only changes properties that actually mutate) */
+  /* Hover State */
   .log-link:hover {
     color: #c5a059 !important;
     background-color: rgba(197, 160, 89, 0.1) !important;
@@ -35,9 +35,39 @@
     margin-right: 0.4rem !important;
     font-size: 0.75rem !important;
   }
+
+  /* Last Updated Sub-line */
+  .log-updated {
+    font-size: 0.7rem !important;
+    color: #888888 !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.6rem !important;
+    font-style: italic !important;
+  }
+
+  /* Roadmap Grouping spacing */
+  .roadmap-group {
+    margin-bottom: 1.25rem !important;
+  }
 </style>
+
 <div style="text-align: center">
   <!-- Section 1: Documentation Master Index -->
   <div class="dev-log-header">Engineering Log & Case Studies</div>
-  <a href="https://pstrophyguides.blogspot.com/2026/11/technical-documentation-index.html" class="log-link"> <span class="bullet">&#9658;</span> View Master Repository </a>
+  <div style="margin-bottom: 1rem">
+    <a href="https://pstrophyguides.blogspot.com/2026/11/technical-documentation-index.html" class="log-link"> <span class="bullet">&#9658;</span> View Master Repository </a>
+  </div>
+
+  <!-- Section 2: Spotlit Roadmaps -->
+  <div class="dev-log-header">Studio Roadmaps & Pipelines</div>
+
+  <div class="roadmap-group">
+    <div class="log-updated">Last Updated: Nov 9, 2026</div>
+    <a href="https://pstrophyguides.blogspot.com/2026/11/trophy-guide-roadmap-production.html" class="log-link"> <span class="bullet">&#9658;</span> Trophy Guide Roadmap </a>
+  </div>
+
+  <div class="roadmap-group">
+    <div class="log-updated">Last Updated: Nov 9, 2026</div>
+    <a href="https://pstrophyguides.blogspot.com/2026/11/development-roadmap-project-intel.html" class="log-link"> <span class="bullet">&#9658;</span> Specialized Mastery Guides </a>
+  </div>
 </div>

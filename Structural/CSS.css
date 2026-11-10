@@ -142,6 +142,24 @@ div.post,
   text-align: center !important;
 }
 
+/* --- Post Date Header Fix --- */
+.date-header,
+.date-header span,
+.post-date,
+.date-header-link {
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+  color: #7ab9f0 !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
 .overview-heading {
   border-bottom: 2px solid #c5a059 !important;
   padding-bottom: 8px !important;
