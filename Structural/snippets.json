@@ -100,7 +100,7 @@
 
   "Warning notice": {
     "prefix": "warning-note",
-    "body": "<div class=\"warning\">${1:Insert Warning here}</div>",
+    "body": "<aside class=\"warning\">${1:Insert Warning here}</aside>",
     "description": "Adds an inline warning notice"
   }
 }
