@@ -71,7 +71,7 @@ header,
   margin-top: 10px !important;
 }
 
-/* --- Post Boxes --- */
+/* --- Post Boxes & Sidebars --- */
 div.post,
 .sidebar .widget {
   background-color: rgba(11, 14, 19, 0.94) !important;
@@ -82,6 +82,13 @@ div.post,
   border-radius: 12px !important;
   color: #c5c5c5 !important;
   padding: 20px !important;
+}
+
+/* Hide default Blogger widget titles in sidebars while keeping them labeled in the backend layout */
+.sidebar .widget h2,
+.sidebar-left-1 .widget h2,
+.sidebar-right .widget h2 {
+  display: none !important;
 }
 
 .category-section {
