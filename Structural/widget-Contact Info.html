@@ -1,39 +1,81 @@
 <style>
-  /* Section Headers */
-  .dev-log-header {
+  .portfolio-avatar-final {
+    width: 110px !important;
+    height: 110px !important;
+    border-radius: 50% !important;
+    border: 3px solid #0070cc !important;
+    display: block !important;
+    margin: 10px 0 15px 0 !important;
+    box-shadow: 0 0 15px #0070cc !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .custom-portfolio-container {
+    text-align: left !important;
+    padding: 5px 10px !important;
+  }
+
+  .portfolio-title {
+    display: block !important;
+    color: #c5a059 !important;
     font-size: 0.95rem !important;
-    font-weight: 700 !important;
+    font-weight: bold !important;
+    margin-bottom: 8px !important;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .comms-grid {
+    color: #d4af37 !important;
+    font-size: 0.82rem !important;
+    font-family: "Consolas", "Courier New", monospace;
+  }
+
+  .comms-row {
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .comms-row strong {
     color: #c5a059 !important;
-    margin: 1rem 0 0.5rem 0 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
   }
 
-  /* Action Links */
-  .log-link {
-    font-size: 0.875rem !important;
-    font-weight: 500 !important;
-    display: inline-block !important;
-    padding: 0.4rem 0.8rem !important;
-    text-decoration: none !important;
-    color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(197, 160, 89, 0.3) !important;
-    border-radius: 4px !important;
-    transition: all 0.2s ease-in-out !important;
+  .comms-row a,
+  .comms-row span {
+    color: #7ab9f0 !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
   }
 
-  /* Hover State (Only changes properties that actually mutate) */
-  .log-link:hover {
-    color: #c5a059 !important;
-    background-color: rgba(197, 160, 89, 0.1) !important;
-    border-color: #c5a059 !important;
+  .comms-row a:hover {
+    color: #fff !important;
+    text-shadow: 0 0 8px #7ab9f0;
   }
 
-  /* Bullet Prefix Spacing */
-  .log-link .bullet {
-    margin-right: 0.4rem !important;
-    font-size: 0.75rem !important;
+  .sector-divider {
+    border-top: 1px solid #333;
+    margin: 10px 0;
+    padding-top: 5px;
+    color: #555;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+
+  .op-disclaimer {
+    font-size: 0.72rem;
+    color: #666;
+    margin-top: 12px;
+    line-height: 1.4;
+    border-left: 2px solid #c5a059;
+    padding-left: 10px;
+  }
+
+  .op-disclaimer strong,
+  .op-disclaimer a {
+    color: #7ab9f0;
+    text-decoration: none;
   }
 </style>
 
