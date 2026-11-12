@@ -1,4 +1,4 @@
-    <b:skin><![CDATA[/*
+<b:skin><![CDATA[/*
 -----------------------------------------------
 Blogger Template Style
 Name:     Simple
@@ -1303,3 +1303,8 @@ dd,
   color: #888888 !important;
 }
   }]]></b:skin>
+
+  a:link {
+  text-decoration: none;
+  color: #8a6019;
+}
