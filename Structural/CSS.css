@@ -53,15 +53,6 @@ header,
 
 .Header h1,
 .Header h1 a {
-  color: #000000 !important;
-  text-align: center !important;
-  font-size: clamp(28px, 4vw, 48px) !important; /* Scaled down slightly for better proportion */
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6) !important; /* Light glow so it pops against darker parts of the banner */
-  width: 100% !important;
-}
-
-.Header h1,
-.Header h1 a {
   color: #1e90ff !important; /* Rich Royal Blue / Dodger Blue */
   text-align: center !important;
   font-size: clamp(24px, 3.8vw, 44px) !important; /* Scaled down slightly */
@@ -71,6 +62,17 @@ header,
     0 0 24px rgba(30, 144, 255, 0.7) !important; /* Matching royal blue outer aura */
   font-weight: 800 !important;
   width: 100% !important;
+}
+
+.Header .description,
+.header-inner .description {
+  color: #000000 !important;
+  font-weight: bold !important;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  padding: 5px 15px !important;
+  border-radius: 4px !important;
+  margin-top: 10px !important;
 }
 
 /* --- Post Boxes & Sidebars --- */
@@ -151,7 +153,6 @@ div.post,
 .date-header-link {
   font-size: 1.1rem !important;
   font-weight: bold !important;
-  color: #7ab9f0 !important;
   letter-spacing: 0.5px !important;
   margin-bottom: 8px !important;
   display: block !important;
@@ -162,23 +163,15 @@ div.post,
   padding: 0 !important;
 }
 
-/* --- Unified Overview Heading (For both h3 and dt) --- */
-.overview-heading {
-  border-bottom: 2px solid #c5a059 !important;
-  padding-bottom: 8px !important;
-  margin-bottom: 15px !important;
-  color: #7ab9f0 !important;
-  font-weight: bold !important;
-  font-size: 16px !important;
-  width: 100% !important;
-  clear: both !important;
-  display: block !important;
-}
+/* --- Specific Heading Rules --- */
 
-/* Add spacing below your definition descriptions */
-.post-body dd,
-dd {
-  margin-bottom: 20px !important;
+/* --- SEO Fix --- */
+h1.post-title {
+  font-size: 26px !important;
+  font-weight: bold !important;
+  color: #7ab9f0 !important;
+  line-height: 1.2 !important;
+  margin: 0.75em 0 15px !important;
 }
 
 .dlc-heading {
@@ -188,10 +181,28 @@ dd {
   color: #7ab9f0 !important;
   font-weight: bold !important;
   text-align: center !important;
-  font-size: 25px !important;
+  font-size: 23px !important;
   width: 100% !important;
   clear: both !important;
   display: block !important;
+}
+
+.overview-heading {
+  border-bottom: 2px solid #c5a059 !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 15px !important;
+  color: #7ab9f0 !important;
+  font-weight: bold !important;
+  font-size: 17px !important;
+  width: 100% !important;
+  clear: both !important;
+  display: block !important;
+}
+
+/* Add spacing below your definition descriptions */
+.post-body dd,
+dd {
+  margin-bottom: 20px !important;
 }
 
 .silver-btn {
@@ -204,7 +215,7 @@ dd {
 }
 
 a:hover {
-  color: #7ab9f0 !important;
+  color: #8c6a42 !important;
 }
 
 .post-body hr,
@@ -332,6 +343,16 @@ td {
   margin: 0 0 10px 0 !important;
   font-size: 15px !important;
   line-height: 1.6 !important;
+}
+
+.trophy-desc p,
+.trophy-desc ol,
+.trophy-desc ul,
+.trophy-desc li,
+dd,
+.post-body dd,
+.post-body p {
+  color: #888888 !important;
 }
 
 .trophy-desc p:last-child {
@@ -693,13 +714,4 @@ td {
 .search-container input:focus {
   border-color: #ffffff;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-/* --- SEO Fix --- */
-h1.post-title {
-  font-size: 30px !important;
-  font-weight: bold !important;
-  color: #7ab9f0 !important;
-  line-height: 1.2 !important;
-  margin: 0.75em 0 15px !important;
 }
