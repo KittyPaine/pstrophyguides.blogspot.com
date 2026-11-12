@@ -40,7 +40,7 @@
 
   "Searchable Overview": {
     "prefix": "dlc-overview",
-    "body": ["<div class=\"overview-node\" data-group=\"${1:DLC Name}\" data-paid=\"${6:true/false}\">", "  <div class=\"banner\">", "    <img src=\"${2:Banner_Image_URL}\" width=\"400\" alt=\"\" />", "  </div>", "", "  <h2 class=\"dlc-heading\">${1:DLC Name}</h2>", "", "  <dl class=\"guide-metrics\">", "    <dt class=\"overview-heading\">Difficulty Rating</dt>", "    <dd>${4:5/10}</dd>", "", "    <dt class=\"overview-heading\">Online/Offline Trophies</dt>", "    <dd>${5:Online/Offline status.}</dd>", "  </dl>", "", "  <h3 class=\"overview-heading\">Quick Overview</h3>", "  <p>${3:DLC Description}</p>", "</div>"],
+    "body": ["<div class=\"overview-node\" data-group=\"${1:DLC Name}\" data-paid=\"${6:true/false}\">", "  <div class=\"banner\">", "    <img src=\"${2:Banner_Image_URL}\" width=\"400\" alt=\"\" />", "  </div>", "", "  <h2 class=\"dlc-heading\">${1:DLC Name}</h2>", "", "  <dl class=\"guide-metrics\">", "    <dt class=\"overview-heading\">Difficulty Rating</dt>", "    <dd>${4:5/10}</dd>", "", "    <dt class=\"overview-heading\">Online/Offline Trophies</dt>", "    <dd>${5:Online/Offline status.}</dd>", "  </dl>", "", "  <h3 class=\"overview-heading\">Quick Overview</h3>", "  <p>${3:DLC Description}</p>", "</div>", "<hr />"],
     "description": "Insert the searchable DLC overview with semantic data lists and headings"
   },
 
