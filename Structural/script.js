@@ -89,3 +89,16 @@ document.addEventListener("input", function (event) {
   }
 });
 //]]>
+
+<!-- Fix for SEO -->
+  // Instantly transform the post title tag from h3 to h1 for SEO semantics
+  document.addEventListener("DOMContentLoaded", function() {
+    var postTitles = document.querySelectorAll('h3.post-title');
+    postTitles.forEach(function(oldH3) {
+      var h1 = document.createElement('h1');
+      h1.className = oldH3.className;
+      h1.innerHTML = oldH3.innerHTML;
+      // Copy over any inline styles or specific attributes if needed
+      oldH3.parentNode.replaceChild(h1, oldH3);
+    });
+  });

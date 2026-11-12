@@ -307,7 +307,7 @@ td {
 .trophy-desc h4 {
   font-size: 1.05rem !important; /* Slightly smaller than the 1.25rem title */
   font-weight: bold !important;
-  color: #7ab9f0 !important; /* Matches your light blue headings theme */
+  color: #c5a059 !important; /* Matches your light blue headings theme */
   display: block !important;
   margin: 15px 0 8px 0 !important; /* Adds clean spacing around sections */
   text-transform: none !important;
@@ -678,4 +678,13 @@ td {
 .search-container input:focus {
   border-color: #ffffff;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* --- SEO Fix --- */
+h1.post-title {
+  font-size: 40px !important;
+  font-weight: bold !important;
+  color: #7ab9f0 !important;
+  line-height: 1.2 !important;
+  margin: 0.75em 0 15px !important;
 }
