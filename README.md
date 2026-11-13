@@ -55,12 +55,13 @@ Legacy content remains preserved in its original form while modernization work i
 
 ### Structural
 
-Contains shared platform assets, UI component references, and supporting theme infrastructure including:
+Contains shared platform assets, editor productivity tools, and supporting theme infrastructure including:
 
 - **Stylesheets & Scripts:** Core CSS-first layout rules and vanilla JavaScript filtering/search logic.
-- **HTML Component Library (`html-components-example`):** Standardized, semantic HTML reference templates (trophy cards, collapsible toggles, warning callouts, and DLC containers) used to ensure visual and structural consistency across Version 1.0.0 guides.
+- **HTML Component & Snippet Library (`HTML Components.html`):** Standardized, semantic HTML reference templates and editor snippets (game breakdown, trophy card, media elements, warning callout, and DLC containers) used to ensure visual and structural consistency across Version 1.0.0 guides.
+- **Targeted HTML Element Blocks:** Specialized reusable code blocks (such as the *Metal Gear Solid Delta* mission, location, and collectible structures) engineered for rapid, manual data insertion across specific sprawling game guides.
 - **Custom Blogger Widgets:** Modular XML/HTML widget implementations engineered for platform navigation, directory filtering, and ad-free presentation.
-- **Linked Data Schema (`global-portfolio-schema.jsonld`):** System-wide JSON-LD structured data definitions for automated entity resolution and search engine indexing.
+- **Linked Data Schema (`schema.jsonld`):** System-wide JSON-LD structured data definitions for automated entity resolution and search engine indexing.
 
 ---
 
@@ -68,9 +69,9 @@ Contains shared platform assets, UI component references, and supporting theme i
 
 Current archive includes:
 
-- 30+ Trophy Guides
+- 40+ Trophy and Specialized Guides
 - Multiple live-service games maintained after launch
-- Coverage across PS3, PS4, and PS5 platforms
+- Coverage across PS3, PS4, PS5 and Vita platforms
 - Tactical shooters, detective games, visual novels, RPGs, horror titles, and cooperative multiplayer games
 - Documentation spanning multiple years of game updates and platform revisions
 
@@ -78,16 +79,20 @@ Current archive includes:
 
 ## 📖 Origin & Mission
 
-PSTrophyGuides began after encountering outdated trophy guides for games such as _Tom Clancy's Rainbow Six Siege_ and _PAYDAY 2: CRIMEWAVE EDITION_.
+PSTrophyGuides has roots tracing back to 2017, when Kitty_Paine began authoring professional trophy guides for TrueTrophies. However, navigating the rigid publishing queues and slow approval processes of legacy platforms created a major operational bottleneck—especially for live-service games requiring rapid updates when patches dropped.
 
-As live-service titles continued to receive major gameplay updates, many existing guides became increasingly unreliable. Trophy requirements changed, methods were patched, and recommended strategies no longer reflected the current state of the game.
+To bypass these delays and take full control over documentation quality, PSTrophyGuides was launched as an independent blog in Nov. 2020. The platform was built around four foundational pillars: **Accuracy, Accessibility, Minimalism, and Long-Term Maintenance**. The primary goal is to lower the skill ceiling so that every completionist can achieve 100% confidence, backed by fully accessible code (such as strict screen-reader support) and clean minimalism.
+
+The breaking point for launching the platform came after repeatedly encountering abandoned, outdated guides for games like _Tom Clancy's Rainbow Six Siege_ and _PAYDAY 2: CRIMEWAVE EDITION_, where major balance changes, DLC drops, and trophy-list revisions rendered existing community resources obsolete. 
+
+I despise abandoning documentation without at least a clear notice that it's no longer being maintained. There should never be ambiguity regarding whether information is still viable or when it was last verified against the in-game version (for example, tracking milestones like my personal final session in *Metal Gear Survive* and the Heist list required for *OVERKILL Salutes You!* in Payday 2: Crimewave* in Nov. 2020 as the hard cutoff for data verification).
 
 The mission of PSTrophyGuides is simple:
 
 - Preserve accurate completion information.
-- Maintain guides after major updates.
+- Maintain guides after major updates without bureaucratic delays.
 - Document alternative strategies and evolving methods.
-- Provide players with information that reflects the current state of the game.
+- Provide players with information that reflects the current state of the game, complete with last-verified timestamps against live patch versions.
 
 Every guide is written from firsthand completion experience, testing, research, and long-term game knowledge.
 
@@ -155,9 +160,12 @@ PSTrophyGuides primarily covers:
 
 ## 🚀 Platform Features
 
-### Chronological Walkthrough Design
+### Guide Architecture & Walkthrough Design
 
-Guides are structured around efficient route planning while accounting for collectibles, missables, progression requirements, and backtracking opportunities.
+Guides are structured dynamically based on game design rather than a one-size-fits-all template:
+- **Standard Lists:** Follow the native PSN trophy order, supplemented by curated external walkthrough links where required.
+- **Open-World & Multiplayer Titles:** Trophy types are grouped strategically, acknowledging that non-linear sandboxes and multiplayer environments lack a definitive unlock sequence.
+- **Specialized Mastery Guides:** Strict chronological ordering (such as the *Metal Gear Solid Delta* collectibles directory) designed for maximum routing efficiency, tracking missables, and minimizing backtracking.
 
 ### Live-Service Maintenance
 
@@ -165,7 +173,7 @@ High-priority guides receive ongoing updates when games introduce balance change
 
 ### Point of No Return Warnings
 
-Critical progression locks and irreversible events are clearly identified throughout walkthroughs.
+Critical progression locks and irreversible events are clearly identified throughout the guides.
 
 ### Alternative Strategy Documentation
 
@@ -173,7 +181,9 @@ Whenever practical, multiple trophy methods are documented so players can select
 
 ### Search & Navigation Tools
 
-Custom search, filtering, and tagging systems allow visitors to quickly locate trophies, collectibles, missables, walkthrough objectives, and guide sections.
+Custom search and filtering interfaces allow visitors to query active guides using targeted data attributes rather than an unmaintained tag taxonomy:
+- **Standard & DLC Filters:** Dynamically parse trophy titles, DLC names, and whether an expansion is paid or free.
+- **Specialized Directory Parameters:** Micro-level data attributes (such as explicit mission and location groupings used in guides like *Metal Gear Solid Delta*) to instantly filter complex collectible trees.
 
 ---
 
@@ -201,9 +211,9 @@ The long-term objective of PSTrophyGuides is to create a reliable, searchable, m
 
 ### 🌐 Programmatic Semantic Engine
 
-- **Asset Implementation:** `Structural/global-portfolio-schema.jsonld`
+- **Asset Implementation:** `schema.jsonld`
 - **Methodology:** Integrated custom JSON-LD linked data schemas inside the core theme architecture utilizing Blogger XML conditional tags (`b:if cond`).
-- **Impact:** Automates system-wide data validation across 38+ live production nodes, dynamically transitioning between `ProfilePage`, `CollectionPage`, and `TechArticle` logic. This explicitly resolves cross-platform entity identity across GitHub, LinkedIn, and trusted validation ledgers, bypassing the crawl-priority limitations of free subdomains through explicit machine-readable metadata.
+- **Impact:** Automates system-wide data validation across 40+ live production nodes, dynamically transitioning between `ProfilePage`, `CollectionPage`, and `TechArticle` logic. This explicitly resolves cross-platform entity identity across GitHub, LinkedIn, and trusted validation ledgers, bypassing the crawl-priority limitations of free subdomains through explicit machine-readable metadata.
 
 ---
 
