@@ -71,7 +71,6 @@ a:hover {
 .log-link,
 .comms-row a,
 .trophy-desc a,
-.post-body a.button,
 a.silver-btn,
 div.post a[class*="btn"],
 .sidebar a[class*="link"],
@@ -79,7 +78,8 @@ div.post a[class*="btn"],
 .archive-content a,
 .archivedate a,
 .kp-project a,
-.dev-side-col a {
+.dev-side-col a,
+.post-body a {
   color: #888888 !important;
   text-decoration: none !important;
   transition: all 0.2s ease-in-out !important;
@@ -98,10 +98,12 @@ div.post a[class*="btn"]:hover,
 .archive-content a:hover,
 .archivedate a:hover,
 .kp-project a:hover,
- .comms-row a:hover {
+.comms-row a:hover,
+.post-body a:hover,
+.dev-side-col a:hover {
   color: #8C6A42 !important; /* Matches visited/hover bronze */
   border-color: #8C6A42 !important;
-  text-decoration: none !important;
+  text-decoration: underline !important;
 }
 
 /* --- 3. HEADINGS & TYPOGRAPHY --- */
