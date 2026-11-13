@@ -2,9 +2,9 @@
 
 PSTrophyGuides is an independent trophy guide and game documentation platform focused on completionist content, walkthrough design, documentation preservation, and long-term guide maintenance.
 
-Created by trophy hunter and technical content creator Kitty_Paine, the platform was built to address a recurring problem within gaming communities: abandoned guides that become outdated as games evolve through patches, balance changes, DLC, and trophy-list revisions.
+Created by lead frontend documentation engineer and platform architect Kitty_Paine, PSTrophyGuides was built to solve a systemic failure in gaming infrastructure: the rampant decay of abandoned, unmaintainable community guides that shatter the moment a live-service title patches, adjusts balance, adds DLC, or revises a trophy list. 
 
-Rather than treating guides as one-time publications, PSTrophyGuides approaches them as living documentation projects that can be reviewed, modernized, and preserved over time.
+Rather than treating guides as disposable forum posts, PSTrophyGuides approaches them as living software documentation—leveraging semantic HTML5, CSS-first responsive layouts, custom vanilla JavaScript filtering engines, and programmatic JSON-LD linked data schemas to maintain production-grade reliability across a multi-node publishing architecture.
 
 ---
 
