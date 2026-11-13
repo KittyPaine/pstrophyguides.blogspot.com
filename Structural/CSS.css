@@ -868,6 +868,8 @@ hr {
   gap: 10px !important;
   min-height: 230px !important;
   min-width: 0 !important;
+  flex: 1;
+  width: 100%;
 }
 
 .trophy-desc h3 {
@@ -1083,13 +1085,13 @@ td {
 }
 
 .offense-title {
-  background: #cc0000;
+  background: #E51A1C;
   color: #8fc8ff;
   border: 1px solid #336699;
 }
 
 .defense-title {
-  background: #0000ff;
+  background: #1893E5;
   color: #8fc8ff;
   border: 1px solid #336699;
 }
