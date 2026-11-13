@@ -37,70 +37,59 @@
     ],
     "description": "Reusable PSTrophyGuides overview, methodology breakdown, and trophy search block"
   },
-
   "Searchable Overview": {
     "prefix": "dlc-overview",
     "body": ["<div class=\"overview-node\" data-group=\"${1:DLC Name}\" data-paid=\"${6:true/false}\">", "  <div class=\"banner\">", "    <img src=\"${2:Banner_Image_URL}\" width=\"400\" alt=\"\" />", "  </div>", "", "  <h2 class=\"dlc-heading\">${1:DLC Name}</h2>", "", "  <dl class=\"guide-metrics\">", "    <dt class=\"overview-heading\">Difficulty Rating</dt>", "    <dd>${4:5/10}</dd>", "", "    <dt class=\"overview-heading\">Online/Offline Trophies</dt>", "    <dd>${5:Online/Offline status.}</dd>", "  </dl>", "", "  <h3 class=\"overview-heading\">Quick Overview</h3>", "  <p>${3:DLC Description}</p>", "</div>", "<hr />"],
     "description": "Insert the searchable DLC overview with semantic data lists and headings"
   },
-
   "Trophy Item": {
     "prefix": "trophy",
     "body": ["<div class=\"trophy\" data-name=\"${1:trophy}\">", "  <img src=\"$2\" class=\"trophy-img\" alt=\"${3: Trophy}\">", "  <div class=\"trophy-desc\">", "    <h3 id=\"${6:game-trophy}\">$4</h3>", "    <p>$5</p>", "  </div>", "</div>"],
     "description": "Insert a formatted trophy block with automatic lowercase GSC ID tracking"
   },
-
   "DLC Trophy Item": {
     "prefix": "dlc-trophy",
     "body": ["<div class=\"dlc-trophy\" data-name=\"${1:trophy}\" data-group=\"${2:DLC}\">", "  <img src=\"$3\" class=\"trophy-img\" alt=\"${4: Trophy}\">", "  <div class=\"trophy-desc\">", "    <h3 id=\"${6:game-trophy}\">$5</h3>", "    <p>$7</p>", "  </div>", "</div>"],
     "description": "Insert a formatted DLC trophy block with automatic lowercase GSC ID tracking"
   },
-
-  "Video": {
-    "prefix": "video",
-    "body": ["<div class=\"video-container\">", "  <iframe src=\"https://www.youtube.com/embed/${1:VideoID}\" allowfullscreen></iframe>", "</div>"],
-    "description": "Insert a 320x266 YouTube embed"
-  },
-
-  "Universal Link": {
-    "prefix": "ext-link",
-    "body": ["<a href=\"${1:https://URL}\" target=\"_blank\" rel=\"noopener noreferrer\">${2:Link Text}</a>"],
-    "description": "Insert a secure link to any external site"
-  },
-
-  "Simple Image Template": {
-    "prefix": "img",
-    "body": ["<img src=\"${1:url}\" alt=\"${2:description}\">"],
-    "description": "Insert an image tag"
-  },
-
   "Overview Heading": {
     "prefix": "overview-heading",
     "body": ["<h2 class=\"overview-heading\">${1:Overview Heading}</h2>"],
     "description": "Standardized heading"
   },
-
+  "Simple Image Template": {
+    "prefix": "img",
+    "body": ["<img src=\"${1:url}\" alt=\"${2:description}\">"],
+    "description": "Insert an image tag"
+  },
+  "Universal Link": {
+    "prefix": "ext-link",
+    "body": ["<a href=\"${1:https://URL}\" target=\"_blank\" rel=\"noopener noreferrer\">${2:Link Text}</a>"],
+    "description": "Insert a secure link to any external site"
+  },
+  "Video": {
+    "prefix": "video",
+    "body": ["<div class=\"video-container\">", "  <iframe src=\"https://www.youtube.com/embed/${1:VideoID}\" allowfullscreen></iframe>", "</div>"],
+    "description": "Insert a 320x266 YouTube embed"
+  },
+  "Warning notice": {
+    "prefix": "warning-note",
+    "body": "<aside class=\"warning\">${1:Insert Warning here}</aside>",
+    "description": "Adds an inline warning notice"
+  },
   "MGS Delta Mission Heading": {
     "prefix": "delta-mission",
     "body": ["<h1 style=\"text-align: center; text-transform: uppercase;\">${1:Mission Name}</h1>", "$0"],
     "description": "Mission heading for the Metal Gear Solid Delta guide"
   },
-
   "MGS Delta Location Heading": {
     "prefix": "delta-location",
     "body": ["<div data-group=\"${1:Mission Name}\">", "  <h2 style=\"text-align: center; text-transform: uppercase;\">${2:Location Name}</h2>", "</div>", "$0"],
     "description": "Location heading grouped under a mission"
   },
-
   "MGS Delta Collectible": {
     "prefix": "delta-collectible",
     "body": ["<div data-group=\"${1:Mission Name}, ${2:Location Name}\" data-name=\"${3:Collectible Name and Number}\" style=\"margin-bottom: 25px\">", "  <h3 style=\"margin-bottom: 5px;\">$3</h3>", "", "  <details>", "    <summary style=\"cursor: pointer; font-weight: bold;\">🔍 Click to Expand Location &amp; Screenshots</summary>", "    <div style=\"padding-top: 10px;\">", "      <p>${4:Step-by-step directions to the collectible.}</p>", "", "      <div style=\"text-align: center; margin-top: 15px;\">", "        <img src=\"${5:Location image URL}\" alt=\"${6:Location screenshot description}\" style=\"max-width: 100%; height: auto; display: block; margin: 8px auto;\" />", "        <img src=\"${7:Map image URL}\" alt=\"${8:Map screenshot description}\" style=\"max-width: 100%; height: auto; display: block; margin: 8px auto;\" />", "      </div>", "    </div>", "  </details>", "</div>", "$0"],
     "description": "Expandable collectible entry grouped under its mission and location"
-  },
-
-  "Warning notice": {
-    "prefix": "warning-note",
-    "body": "<aside class=\"warning\">${1:Insert Warning here}</aside>",
-    "description": "Adds an inline warning notice"
   }
 }
