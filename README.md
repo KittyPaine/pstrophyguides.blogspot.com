@@ -55,13 +55,12 @@ Legacy content remains preserved in its original form while modernization work i
 
 ### Structural
 
-Contains shared platform assets and supporting infrastructure including:
+Contains shared platform assets, UI component references, and supporting theme infrastructure including:
 
-- Stylesheets
-- Scripts
-- Templates
-- Snippets
-- Shared framework assets
+- **Stylesheets & Scripts:** Core CSS-first layout rules and vanilla JavaScript filtering/search logic.
+- **HTML Component Library (`html-components-example`):** Standardized, semantic HTML reference templates (trophy cards, collapsible toggles, warning callouts, and DLC containers) used to ensure visual and structural consistency across Version 1.0.0 guides.
+- **Custom Blogger Widgets:** Modular XML/HTML widget implementations engineered for platform navigation, directory filtering, and ad-free presentation.
+- **Linked Data Schema (`global-portfolio-schema.jsonld`):** System-wide JSON-LD structured data definitions for automated entity resolution and search engine indexing.
 
 ---
 
@@ -201,9 +200,10 @@ The long-term objective of PSTrophyGuides is to create a reliable, searchable, m
 ---
 
 ### 🌐 Programmatic Semantic Engine
-*   **Asset Implementation:** `Structural/global-portfolio-schema.jsonld`
-*   **Methodology:** Integrated custom JSON-LD linked data schemas inside the core theme architecture utilizing Blogger XML conditional tags (`b:if cond`).
-*   **Impact:** Automates system-wide data validation across 38+ live production nodes, dynamically transitioning between `ProfilePage`, `CollectionPage`, and `TechArticle` logic. This explicitly resolves cross-platform entity identity across GitHub, LinkedIn, and trusted validation ledgers, bypassing the crawl-priority limitations of free subdomains through explicit machine-readable metadata.
+
+- **Asset Implementation:** `Structural/global-portfolio-schema.jsonld`
+- **Methodology:** Integrated custom JSON-LD linked data schemas inside the core theme architecture utilizing Blogger XML conditional tags (`b:if cond`).
+- **Impact:** Automates system-wide data validation across 38+ live production nodes, dynamically transitioning between `ProfilePage`, `CollectionPage`, and `TechArticle` logic. This explicitly resolves cross-platform entity identity across GitHub, LinkedIn, and trusted validation ledgers, bypassing the crawl-priority limitations of free subdomains through explicit machine-readable metadata.
 
 ---
 
