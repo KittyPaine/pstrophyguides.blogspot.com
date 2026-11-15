@@ -1,7 +1,7 @@
 {
   "PSTrophyGuides Overview": {
     "prefix": "overview",
-    "body": ["<div class=\"banner\">", "  <img src=\"${1:Banner_Image_URL}\" width=\"400\" alt=\"${2:}\" />", "</div>", "", "<dl class=\"guide-metrics\">", "  <dt class=\"overview-heading\">${5:Difficulty Rating}</dt>", "  <dd>${6:5/10}</dd>", "", "  <dt class=\"overview-heading\">${7:Online/Offline Trophies}</dt>", "  <dd>${8:Online/Offline status.}</dd>", "</dl>", "", "<h3 class=\"overview-heading\">${3:Quick Overview}</h3>", "<p>${4:Game Description}</p>", "", "<span><!--more--></span>", "<div class=\"search-container\">", "  <input type=\"text\" id=\"trophySearch\" aria-label=\"Filter by trophy name, DLC name, or whether DLC is paid or free\" />", "</div>", "", "<hr />", "$0"],
+    "body": ["<div class=\"banner\">", "  <img src=\"${1:Banner_Image_URL}\" width=\"400\" alt=\"${2:}\" />", "</div>", "", "<h3 class=\"overview-heading\">${3:Quick Overview}</h3>", "<p>${4:Game Description}</p>", "", "<dl class=\"guide-metrics\">", "  <dt class=\"overview-heading\">${5:Difficulty Rating}</dt>", "  <dd>${6:5/10}</dd>", "", "  <dt class=\"overview-heading\">${7:Online/Offline Trophies}</dt>", "  <dd>${8:Online/Offline status.}</dd>", "</dl>", "", "<span><!--more--></span>", "<div class=\"search-container\">", "  <input type=\"text\" id=\"trophySearch\" aria-label=\"Filter by trophy name, DLC name, or whether DLC is paid or free\" />", "</div>", "", "<hr />", "$0"],
     "description": "Reusable PSTrophyGuides overview, and trophy search block"
   },
   "Searchable Overview": {
