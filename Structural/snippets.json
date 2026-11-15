@@ -1,57 +1,12 @@
 {
   "PSTrophyGuides Overview": {
     "prefix": "overview",
-    "body": [
-      "<div class=\"banner\">",
-      "  <img src=\"${1:Banner_Image_URL}\" width=\"400\" alt=\"${2:}\" />",
-      "</div>",
-      "",
-      "<dl class=\"guide-metrics\">",
-      "  <dt class=\"overview-heading\">${5:Difficulty Rating}</dt>",
-      "  <dd>${6:5/10}</dd>",
-      "",
-      "  <dt class=\"overview-heading\">${7:Online/Offline Trophies}</dt>",
-      "  <dd>${8:Online/Offline status.}</dd>",
-      "</dl>",
-      "",
-      "<h3 class=\"overview-heading\">${3:Quick Overview}</h3>",
-      "<p>${4:Game Description}</p>",
-      "",
-      "<span><!--more--></span>",
-      "<div class=\"search-container\">",
-      "  <input type=\"text\" id=\"trophySearch\" aria-label=\"Filter by trophy name, DLC name, or whether DLC is paid or free\" />",
-      "</div>",
-      ""
-      "<hr />",
-      "$0"
-    ],
-    "description": "Reusable PSTrophyGuides overview, methodology breakdown, and trophy search block"
-  },    "description": "Reusable PSTrophyGuides overview, methodology breakdown, and trophy search block"
+    "body": ["<div class=\"banner\">", "  <img src=\"${1:Banner_Image_URL}\" width=\"400\" alt=\"${2:}\" />", "</div>", "", "<dl class=\"guide-metrics\">", "  <dt class=\"overview-heading\">${5:Difficulty Rating}</dt>", "  <dd>${6:5/10}</dd>", "", "  <dt class=\"overview-heading\">${7:Online/Offline Trophies}</dt>", "  <dd>${8:Online/Offline status.}</dd>", "</dl>", "", "<h3 class=\"overview-heading\">${3:Quick Overview}</h3>", "<p>${4:Game Description}</p>", "", "<span><!--more--></span>", "<div class=\"search-container\">", "  <input type=\"text\" id=\"trophySearch\" aria-label=\"Filter by trophy name, DLC name, or whether DLC is paid or free\" />", "</div>", "", "<hr />", "$0"],
+    "description": "Reusable PSTrophyGuides overview, and trophy search block"
   },
   "Searchable Overview": {
     "prefix": "dlc-overview",
-    "body": [
-      "<div class=\"overview-node\" data-group=\"${1:DLC Name}\" data-paid=\"${6:true/false}\">",
-      "  <div class=\"banner\">",
-      "    <img src=\"${2:Banner_Image_URL}\" width=\"400\" alt=\"\" />",
-      "  </div>",
-      "",
-      "  <h2 class=\"dlc-heading\">${1:DLC Name}</h2>",
-      "",
-      "  <dl class=\"guide-metrics\">",
-      "    <dt class=\"overview-heading\">Difficulty Rating</dt>",
-      "    <dd>${4:5/10}</dd>",
-      "",
-      "    <dt class=\"overview-heading\">Online/Offline Trophies</dt>",
-      "    <dd>${5:Online/Offline status.}</dd>",
-      "  </dl>",
-      "",
-      "  <h3 class=\"overview-heading\">Quick Overview</h3>",
-      "  <p>${3:DLC Description}</p>",
-      "</div>",
-      ''
-      "<hr />"
-    ],
+    "body": ["<div class=\"overview-node\" data-group=\"${1:DLC Name}\" data-paid=\"${6:true/false}\">", "  <div class=\"banner\">", "    <img src=\"${2:Banner_Image_URL}\" width=\"400\" alt=\"\" />", "  </div>", "  <h2 class=\"dlc-heading\">${1:DLC Name}</h2>", "", "  <h3 class=\"overview-heading\">Quick Overview</h3>", "  <p>${3:DLC Description}</p>", "", "  <dl class=\"guide-metrics\">", "    <dt class=\"overview-heading\">Difficulty Rating</dt>", "    <dd>${4:5/10}</dd>", "", "    <dt class=\"overview-heading\">Online/Offline Trophies</dt>", "    <dd>${5:Online/Offline status.}</dd>", "  </dl>", "</div>", "", "<hr />"],
     "description": "Insert the searchable DLC overview with semantic data lists and headings"
   },
   "Trophy Item": {
