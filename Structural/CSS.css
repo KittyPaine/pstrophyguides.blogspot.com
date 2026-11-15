@@ -961,6 +961,15 @@ hr {
   width: 100%;
 }
 
+.official-desc {
+  font-style: italic;
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin: 2px 0 8px 0;
+  padding-left: 8px;
+  border-left: 2px solid currentColor; /* Subtle accent line without hardcoding colors */
+}
+
 .trophy-desc h3 {
   font-size: 1.25rem !important;
   font-weight: bold !important;
