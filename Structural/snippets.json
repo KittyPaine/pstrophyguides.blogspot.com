@@ -19,6 +19,11 @@
     "body": ["<div class=\"dlc-trophy\" data-name=\"${1:trophy}\" data-group=\"${2:DLC}\">", "  <img src=\"$3\" class=\"trophy-img\" alt=\"${4:Trophy}\">", "  <div class=\"trophy-desc\">", "    <h3 id=\"${6:game_trophy}\">$5</h3>", "    <div class=\"official-desc\">\"$7\"</div>", "    <p>$8</p>", "  </div>", "</div>"],
     "description": "Insert a formatted DLC trophy block with official description and automatic lowercase GSC ID tracking"
   },
+  "Missable Tag": {
+    "prefix": "missable-tag",
+    "body": ["<span class=\"missable-tag\">Missable</span>"],
+    "description": "Adds a high-contrast red Missable pill badge inside a trophy heading"
+  },
   "Overview Heading": {
     "prefix": "overview-heading",
     "body": ["<h2 class=\"overview-heading\">${1:Overview_Heading}</h2>"],
