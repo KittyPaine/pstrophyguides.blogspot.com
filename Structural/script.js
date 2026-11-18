@@ -1,6 +1,7 @@
 // 1. Trophy Filtering System (#trophySearch)
 // What it does: Dynamically filters trophy cards, DLC overview nodes, and category sections in real time based on user input, matching by trophy name, DLC group name, or DLC pricing status ("paid" or "free").
 // Updated Trophy Filtering System (#trophySearch) with Physical DLC Containers
+// Updated Trophy Filtering System (#trophySearch) - Fixed Nested Trophy Name Search
 function filterTrophies() {
   const input = document.querySelector("#trophySearch");
   if (!input) return;
@@ -9,38 +10,73 @@ function filterTrophies() {
   const isStatusSearch = query === "paid" || query === "free";
   const wantedStatus = query === "paid" ? "true" : "false";
 
-  // 1. Process physical DLC containers (the parent wrappers)
   const dlcContainers = document.querySelectorAll(".dlc-container");
   const matchingGroups = new Set();
 
+  // 1. Evaluate DLC Containers (Group name or Paid/Free status)
   for (const container of dlcContainers) {
     const group = (container.dataset.group || "").toLowerCase().trim();
     const paidStatus = container.dataset.paid;
 
     const groupMatches = !isStatusSearch && query !== "" && group.includes(query);
-    const matches = !query || (isStatusSearch ? paidStatus === wantedStatus : groupMatches);
+    const containerMatches = !query || (isStatusSearch ? paidStatus === wantedStatus : groupMatches);
 
-    // If the DLC container matches, keep it visible; otherwise hide it entirely
-    container.classList.toggle("is-hidden", !matches);
-    container.style.setProperty("display", matches ? "block" : "none", "important");
-
-    if (matches && group) matchingGroups.add(group);
+    if (containerMatches && group) matchingGroups.add(group);
   }
 
-  // 2. Process individual base-game / loose trophies outside DLC wrappers
+  // 2. Process ALL individual trophies across the page (Base game & inside DLC containers)
   for (const trophy of document.querySelectorAll(".trophy, .dlc-trophy")) {
-    // Skip trophies already safely nested inside a DLC container (handled by container visibility)
-    if (trophy.closest(".dlc-container")) continue;
-
     const name = (trophy.dataset.name || "").toLowerCase();
-    const matches = !query || name.includes(query);
+
+    // Find if this trophy is inside a container and if that container matched a DLC/pricing query
+    const parentContainer = trophy.closest(".dlc-container");
+    let containerAllows = true;
+
+    if (parentContainer) {
+      const containerGroup = (parentContainer.dataset.group || "").toLowerCase().trim();
+      const containerPaid = parentContainer.dataset.paid;
+
+      if (isStatusSearch) {
+        containerAllows = containerPaid === wantedStatus;
+      } else if (query && matchingGroups.has(containerGroup)) {
+        containerAllows = true;
+      }
+    }
+
+    // A trophy matches if:
+    // - There is no query, OR
+    // - Its own data-name matches the query, OR
+    // - Its parent container matched a group/pricing search query
+    let matches;
+    if (!query) {
+      matches = true;
+    } else if (isStatusSearch) {
+      matches = parentContainer ? parentContainer.dataset.paid === wantedStatus : false;
+    } else {
+      const nameMatches = name.includes(query);
+      const groupMatches = parentContainer && matchingGroups.has((parentContainer.dataset.group || "").toLowerCase().trim());
+      matches = nameMatches || groupMatches;
+    }
 
     trophy.classList.toggle("is-hidden", !matches);
     trophy.style.setProperty("display", matches ? "flex" : "none", "important");
   }
 
-  // 3. Category Section Containment Check (protecting videos, tables, and isolated elements)
-  for (const section of document.querySelectorAll(".category-section")) {
+  // 3. Category Section & DLC Container Visibility Clean-up
+  for (const container of dlcContainers) {
+    const hasVisibleChild = container.querySelector(".trophy:not(.is-hidden), .dlc-trophy:not(.is-hidden)");
+    const group = (container.dataset.group || "").toLowerCase().trim();
+    const groupQueryMatch = !isStatusSearch && query && group.includes(query);
+    const statusQueryMatch = isStatusSearch && container.dataset.paid === wantedStatus;
+
+    const shouldShowContainer = !query || groupQueryMatch || statusQueryMatch || hasVisibleChild;
+
+    container.classList.toggle("is-hidden", !shouldShowContainer);
+    container.style.setProperty("display", shouldShowContainer ? "block" : "none", "important");
+  }
+
+  // 4. Category Section Containment Check (protecting videos, tables, and isolated elements)
+  for (const section of document.querySelectorAll(".media-container")) {
     const hasVisibleContent = section.querySelector(".dlc-container:not(.is-hidden), .trophy:not(.is-hidden), .dlc-trophy:not(.is-hidden)");
 
     section.style.setProperty("display", !query || hasVisibleContent ? "block" : "none", "important");
