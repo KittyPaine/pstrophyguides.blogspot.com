@@ -4,9 +4,9 @@
     "body": ["<div class=\"banner\">", "  <img src=\"${1:Banner_Image_URL}\" width=\"400\" alt=\"${2:}\" />", "</div>", "", "<h3 class=\"overview-heading\">${3:Quick_Overview}</h3>", "<p>${4:Game_Description}</p>", "", "<dl class=\"guide-metrics\">", "  <dt class=\"overview-heading\">${5:Difficulty_Rating}</dt>", "  <dd>${6:5/10}</dd>", "", "  <dt class=\"overview-heading\">${7:Online_Offline_Trophies}</dt>", "  <dd>${8:Online_Offline_status.}</dd>", "</dl>", "", "<span><!--more--></span>", "<div class=\"search-container\">", "  <input type=\"text\" id=\"trophySearch\" aria-label=\"Filter by trophy name, DLC name, or whether DLC is paid or free\" />", "</div>", "", "<hr />", "$0"],
     "description": "Reusable PSTrophyGuides overview, and trophy search block"
   },
-  "Searchable Overview": {
+  "DLC Overview": {
     "prefix": "dlc-overview",
-    "body": ["<div class=\"overview-node\" data-group=\"${1:DLC_Name}\" data-paid=\"${6:true/false}\">", "  <div class=\"banner\">", "    <img src=\"${2:Banner_Image_URL}\" width=\"400\" alt=\"\" />", "  </div>", "  <h2 class=\"dlc-heading\">${1:DLC_Name}</h2>", "", "  <h3 class=\"overview-heading\">Quick_Overview</h3>", "  <p>${3:DLC_Description}</p>", "", "  <dl>", "    <dt class=\"overview-heading\">Difficulty_Rating</dt>", "    <dd>${4:5/10}</dd>", "", "    <dt class=\"overview-heading\">Online_Offline_Trophies</dt>", "    <dd>${5:Online_Offline_status.}</dd>", "  </dl>", "</div>", "", "<hr />"],
+    "body": ["<div class=\"overview-node\">", "  <div class=\"banner\">", "    <img src=\"${2:Banner_Image_URL}\" width=\"400\" alt=\"\" />", "  </div>", "  <h2 class=\"dlc-heading\">${1:DLC_Name}</h2>", "", "  <h3 class=\"overview-heading\">Quick_Overview</h3>", "  <p>${3:DLC_Description}</p>", "", "  <dl>", "    <dt class=\"overview-heading\">Difficulty_Rating</dt>", "    <dd>${4:5/10}</dd>", "", "    <dt class=\"overview-heading\">Online_Offline_Trophies</dt>", "    <dd>${5:Online_Offline_status.}</dd>", "  </dl>", "</div>", "", "<hr />"],
     "description": "Insert the searchable DLC overview with semantic data lists and headings"
   },
   "Trophy Item": {
@@ -14,10 +14,10 @@
     "body": ["<div class=\"trophy\" data-name=\"${1:trophy}\">", "  <img src=\"$2\" class=\"trophy-img\" alt=\"${3:Trophy}\">", "  <div class=\"trophy-desc\">", "    <h3 id=\"${6:game_trophy}\">$4</h3>", "    <div class=\"official-desc\">\"$5\"</div>", "    <p>$7</p>", "  </div>", "</div>"],
     "description": "Insert a formatted trophy block with official description and automatic lowercase GSC ID tracking"
   },
-  "DLC Trophy Item": {
-    "prefix": "dlc-trophy",
-    "body": ["<div class=\"dlc-trophy\" data-name=\"${1:trophy}\" data-group=\"${2:DLC}\">", "  <img src=\"$3\" class=\"trophy-img\" alt=\"${4:Trophy}\">", "  <div class=\"trophy-desc\">", "    <h3 id=\"${6:game_trophy}\">$5</h3>", "    <div class=\"official-desc\">\"$7\"</div>", "    <p>$8</p>", "  </div>", "</div>"],
-    "description": "Insert a formatted DLC trophy block with official description and automatic lowercase GSC ID tracking"
+  "DLC Container Opening": {
+    "prefix": "dlc-container",
+    "body": ["<section class=\"dlc-container\" data-group=\"${1:Chapter Name}\" data-paid=\"${2|true,false|}\">$0"],
+    "description": "Inserts just the opening dlc-container section tag"
   },
   "Missable Tag": {
     "prefix": "missable-tag",
